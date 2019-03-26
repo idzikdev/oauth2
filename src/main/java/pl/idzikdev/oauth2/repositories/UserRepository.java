@@ -6,6 +6,6 @@ import org.springframework.transaction.annotation.Transactional;
 import pl.idzikdev.oauth2.models.UserInfo;
 @Repository
 @Transactional
-public interface UserRepository implements JpaRepository<UserInfo,Integer> {
-
+public interface UserRepository extends JpaRepository<UserInfo,Integer> {
+    UserInfo findByUsername(String username);
 }
